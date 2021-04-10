@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:dia/dia.dart';
 import 'package:dia_body/dia_body.dart';
 import 'package:dia_rest_example/models/api_response.dart';
+import 'package:dia_static/dia_static.dart';
 
 import 'models/server_context.dart';
 import 'routers/ApiRouter.dart';
@@ -32,6 +33,8 @@ void serverInstance(List args) {
       }).toBody();
     }
   });
+
+  app.use(serve('public', index: 'index.html'));
 
   app.use(body());
   app.use(ApiRouter().middleware);

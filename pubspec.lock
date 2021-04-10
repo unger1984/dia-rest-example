@@ -190,6 +190,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.3"
+  dia_static:
+    dependency: "direct main"
+    description:
+      name: dia_static
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.1"
   dotenv:
     dependency: "direct main"
     description:

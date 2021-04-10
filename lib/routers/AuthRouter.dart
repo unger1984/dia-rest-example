@@ -22,7 +22,8 @@ class AuthRouter {
         ctx.throwError(401, message: 'Wrong login:password');
         return;
       }
-      final token = JWT(user).sign(SecretKey('secret'));
+      var token = JWT(user).sign(SecretKey('secret'));
+      print(token);
       ctx.body = ApiResponse(true, data: token).toBody();
     });
   }
